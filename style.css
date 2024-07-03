@@ -1,0 +1,139 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(232, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  position: absolute;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+  width: 100%;
+  min-height: 100vh;
+}
+header {
+  position: relative;
+  height: 168px;
+  max-width: 540px;
+  margin: 80px auto 0;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+
+header .quote {
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: 0.25px;
+}
+
+header .title {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+}
+
+header p {
+  font-weight: 200;
+  letter-spacing: 0.1px;
+  line-height: 25px;
+}
+
+main {
+  position: relative;
+  max-width: 1110px;
+  max-height: 530px;
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-areas:
+    "supervisor team-builder calculator"
+    "supervisor karma calculator";
+  align-items: center;
+  gap: 30px;
+}
+
+article {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5) ;
+  
+}
+
+article h3 {
+  position: relative;
+  /* margin: 32px 0 0 32px; */
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+article p {
+  position: relative;
+  margin-top: 8px;
+  font-weight: 200;
+  line-height: 23px;
+  letter-spacing: 0.09;
+  font-size: 13px;
+  color: var(--very-dark-blue);
+}
+
+article img {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  width: 64px;
+  height: 64px;
+}
+
+
+.supervisor {
+  grid-area: supervisor;
+  border-top: 4px solid var(--cyan);
+}
+
+.team-builder {
+  grid-area: team-builder;
+  border-top: 4px solid var(--red);
+}
+
+.karma {
+  grid-area: karma;
+  border-top: 4px solid var(--orange);
+}
+
+.calculator {
+  grid-area: calculator;
+  border-top: 4px solid var(--blue);
+}
+
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
