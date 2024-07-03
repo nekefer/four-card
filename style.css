@@ -25,9 +25,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   background-color: var(--very-light-gray);
+  min-height: 100vh; 
   width: 100%;
-  min-height: 100vh;
 }
+
 header {
   position: relative;
   height: 168px;
@@ -58,7 +59,6 @@ header p {
 main {
   position: relative;
   max-width: 1110px;
-  max-height: 530px;
   margin: 64px auto 0;
   display: grid;
   grid-template-areas:
@@ -70,18 +70,16 @@ main {
 
 article {
   position: relative;
-  width: 350px;
+  max-width: 350px;
   height: 250px;
   background-color: white;
   padding: 32px;
   border-radius: 8px;
-  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5) ;
-  
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
 }
 
 article h3 {
   position: relative;
-  /* margin: 32px 0 0 32px; */
   font-size: 20px;
   font-weight: 600;
   color: var(--very-dark-blue);
@@ -105,7 +103,6 @@ article img {
   height: 64px;
 }
 
-
 .supervisor {
   grid-area: supervisor;
   border-top: 4px solid var(--cyan);
@@ -126,14 +123,51 @@ article img {
   border-top: 4px solid var(--blue);
 }
 
-
-.attribution {
-  position: absolute;
+footer {
+  position: relative;
   bottom: 0;
   width: 100%;
   font-size: 11px;
   text-align: center;
+  background-color: var(--very-light-gray);
+  margin-top: 32px;
 }
-.attribution a {
+
+footer a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    height: auto;
+  }
+
+  header {
+    width: 311px;
+  }
+
+  header .quote {
+    font-size: 24px;
+    letter-spacing: 0.17px;
+  }
+
+  header .title {
+    font-size: 24px;
+    letter-spacing: 0.17px;
+  }
+
+  main {
+    grid-template-areas:
+      "supervisor"
+      "team-builder"
+      "karma"
+      "calculator";
+      justify-content: center;
+  }
+
+  article {
+    width: 311px;
+    height: 222px;
+    padding: 27px 28px;
+  }
 }
